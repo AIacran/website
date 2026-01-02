@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VirusTotal | Alacran Projects</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="about-bg">
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="img/logo1.png" height="72" width="52" alt="Logo"></div>
+        <div>Alacran Projects</div>
+      </div>
+
+      <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="about.html">Hakkımda</a>
+        <a href="projeler.html">Projelerim</a>
+        <a href="virustotal.html" class="active">VirusTotal</a>
+      </nav>
+
+      <a class="pill" href="iletisim.html">İletişim</a>
+    </header>
+
+    <main class="vt-min">
+      <!-- herO -->
+      <section class="vt-hero">
+        <div class="kicker">VIRUSTOTAL</div>
+
+        <h1 class="vt-title">
+          VirusTotal sonuçları ve <span class="name">False Positive</span> açıklaması
+        </h1>
+
+        <p class="vt-desc">
+          Bazı antivirüs motorları, tweak/optimizasyon araçlarını “suspicious” olarak işaretleyebilir.
+          Bu sayfada VirusTotal linki ve nedenlerinin açıklaması var.
+        </p>
+
+        <div class="vt-actions">
+          <a class="minbtn minbtn-primary"
+             href="https://www.virustotal.com/gui/file/0a503f3f690946597cc8fdb8dfc8c8d12b912bd7e27f1414c1fc927ca8e2393e"
+             target="_blank" rel="noreferrer">
+            VirusTotal Linkini Aç
+          </a>
+
+          <a class="minbtn minbtn-ghost"
+             href="https://github.com/AIacran/alacran-tweaking-tool/releases/tag/tools"
+             target="_blank" rel="noreferrer">
+            GitHub Repo
+          </a>
+        </div>
+      </section>
+
+      <section class="vt-block">
+        <h2 class="vt-h2">Neden “False Positive” olabiliyor?</h2>
+
+        <div class="vt-card">
+          <ul class="vt-list">
+            <li><b>Davranış benzerliği:</b> Tweak araçları registry/servis/ayar değiştirir; bu davranış bazı AV’lerin “riskli” kategorisine benzer.</li>
+            <li><b>İmzalanmamış dosyalar:</b> Kod imzası (code signing) yoksa bazı motorlar daha agresif işaretleyebilir.</li>
+            <li><b>Yeni/az bilinen dosya:</b> Düşük “reputation” (az indirme) dosyalar daha kolay şüpheli görünür.</li>
+            <li><b>Packed/obfuscation şüphesi:</b> Bazı derleyici/paketleyiciler (packer) kötü amaçlı yazılımlarda da kullanıldığı için alarm üretebilir.</li>
+            <li><b>Heuristic/AI motorlar:</b> İmza tabanlı değil, tahmin tabanlı taramalar yanlış pozitif verebilir.</li>
+            <li><b>Sistem araçları:</b> PowerShell / cmd / task scheduler gibi sistem araçlarını kullanmak “living off the land” olarak yanlış yorumlanabilir.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="vt-block">
+        <h2 class="vt-h2">Kullanıcı neyi kontrol edebilir?</h2>
+
+        <div class="vt-grid">
+          <div class="vt-mini">
+            <div class="vt-mini-title">Kaynak</div>
+            <div class="vt-mini-text">Sadece resmi GitHub’dan indir (release kısmı).</div>
+          </div>
+
+          <div class="vt-mini">
+            <div class="vt-mini-title">Hash</div>
+            <div class="vt-mini-text">SHA256’ı karşılaştır (release notlarında paylaşılabilir).</div>
+          </div>
+
+          <div class="vt-mini">
+            <div class="vt-mini-title">İzinler</div>
+            <div class="vt-mini-text">Araç neye erişiyor? Gereksiz admin istememeli.</div>
+          </div>
+
+          <div class="vt-mini">
+            <div class="vt-mini-title">Açık/Şeffaf</div>
+            <div class="vt-mini-text">Changelog + açıklama + kullanım adımları.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vt-block">
+        <h2 class="vt-h2">Dosya Bilgisi </h2>
+
+        <div class="vt-card">
+          <div class="kv">
+            <div class="k">Dosya Adı</div>
+            <div class="v">AlacranTweakTool.exe</div>
+          </div>
+          <div class="kv">
+            <div class="k">Sürüm</div>
+            <div class="v">v1.1</div>
+          </div>
+          <div class="kv">
+            <div class="k">SHA256</div>
+            <div class="v mono">0a503f3f690946597cc8fdb8dfc8c8d12b912bd7e27f1414c1fc927ca8e2393e</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>
